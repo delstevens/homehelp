@@ -129,6 +129,22 @@ input {
   height: auto !important;
 }
 
+
+.checkbox {
+  margin-bottom: 10px;
+  line-height:14px;
+  span {
+    margin-left: 20px;
+    font-weight: normal;
+    line-height: 25px;
+  }
+}
+
+#session_remember_me {
+  width: auto;
+  margin-left: 0;
+}
+
 #error_explanation {
   color: red;
   ul {
