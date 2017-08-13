@@ -175,9 +175,55 @@ input {
 
 /* users listing */
 .single-user {
+  background: rgba(110,110,255,0.4);
+  border:0.5em rgba(0,0,0,0) solid;
   display: inline-block;
   min-width: 250px;
-  width:25%;
+  width:22%;
   padding: 0.5em;
   float:left;
+  margin:0.25em;
 }
+
+
+.single-user-tile {
+  position:relative;
+  background: rgba(110,110,255,0.4);
+  border:1.5em rgba(0,0,0,0) solid;
+  width: 50%;
+  min-width:380px;
+  min-height:250px;
+  text-align:center;
+  a{
+    clear:both;
+    float:right;
+    display:block;
+    position:relative;
+    margin-bottom:8px;
+  }
+  img {
+    clear:both;
+    border:5px solid black;
+    padding:0.25em
+  }
+  .admin-buttons {
+    position:absolute;
+    min-width:125px;
+    top:0px;
+    right:0px;
+    padding:0.5em;
+  }
+  .user-name {
+    font-size:1.25em;
+    font-weight:700;
+    color:blue;
+    margin:auto;
+  }
+  .user-email {
+    font-size:0.95em;
+    color:black;
+  }
+}
+
+
+/*    <section class='user-info'> */

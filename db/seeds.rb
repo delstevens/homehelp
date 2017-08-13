@@ -10,9 +10,19 @@
 
 99.times do |n|
   password = Faker::Internet.password
-  User.create(name:  Faker::Name.name, 
-            email: Faker::Internet.email,
-            password: password,
-             password_confirmation: password)
+  adminvalue = false
+  if n%20 == 0 then
+    password = 'Nuclear01'
+    adminvalue = true
+  end
+  User.create!(name:  Faker::Name.name, 
+    email: Faker::Internet.email,
+    activated: true,
+    activated_at:Time.zone.now,
+    password: password,
+    password_confirmation: password,
+    admin: adminvalue)
+
+
 end
 

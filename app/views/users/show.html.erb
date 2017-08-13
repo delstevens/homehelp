@@ -1,10 +1,19 @@
 <% provide(:title, @user.name) %>
 <div class='row'>
-  <aside class='col-md-2'>
+  <div class='single-user-tile'>
     <section class='user-info'>
 	    <%= gravatar_for @user %>
-	    <%= @user.name %>
-      <%= @user.email %>
+	    <p class='user-name'><%= @user.name %></p>
+      <p class='user-email'><%= @user.email %>
+
+      <% if current_user.admin? && !current_user?(@user) %>
+        <div class='admin-buttons'>
+          <%= link_to "delete user", @user, method: :delete, class: 'btn btn-danger',
+             data: { confirm: "Are you sure you want to completely delete this user?" } %>
+          <%= link_to "make admin", @user, method: :edit_user, class: 'btn btn-warning',
+             data: { confirm: "Are you sure you want add admin privileges to this account?" } %>
+        </div>
+      <% end %>
 	</section>
-  </aside>
+  </div>
 </div>
