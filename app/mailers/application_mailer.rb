@@ -1,4 +1,4 @@
 class ApplicationMailer < ActionMailer::Base
-  default from: 'admin@liberby.co.nz'
+  default from: 'admin@liberty.co.nz'
   layout 'mailer'
 end

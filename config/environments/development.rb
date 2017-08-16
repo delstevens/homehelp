@@ -11,7 +11,6 @@ Rails.application.configure do
   host = 'localhost:3000' # Don't use this literally; use your local dev host instead
   config.action_mailer.default_url_options = { host: host, protocol: 'https' }
 
-
   config.cache_classes = false
 
   # Do not eager load code on boot.
